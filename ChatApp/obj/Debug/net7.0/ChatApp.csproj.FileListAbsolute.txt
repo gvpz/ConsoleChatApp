@@ -12,3 +12,17 @@ P:\Programming\ChatApp\ChatApp\obj\Debug\net7.0\refint\ChatApp.dll
 P:\Programming\ChatApp\ChatApp\obj\Debug\net7.0\ChatApp.pdb
 P:\Programming\ChatApp\ChatApp\obj\Debug\net7.0\ChatApp.genruntimeconfig.cache
 P:\Programming\ChatApp\ChatApp\obj\Debug\net7.0\ref\ChatApp.dll
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\bin\Debug\net7.0\ChatApp.exe
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\bin\Debug\net7.0\ChatApp.deps.json
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\bin\Debug\net7.0\ChatApp.runtimeconfig.json
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\bin\Debug\net7.0\ChatApp.dll
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\bin\Debug\net7.0\ChatApp.pdb
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.GeneratedMSBuildEditorConfig.editorconfig
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.AssemblyInfoInputs.cache
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.AssemblyInfo.cs
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.csproj.CoreCompileInputs.cache
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.dll
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\refint\ChatApp.dll
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.pdb
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ChatApp.genruntimeconfig.cache
+P:\Programming\ChatApp\ConsoleChatApp\ChatApp\obj\Debug\net7.0\ref\ChatApp.dll

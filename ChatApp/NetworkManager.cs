@@ -12,6 +12,7 @@ namespace ChatApp
         private static bool connected;
         private static TcpClient client;
 
+        //Connects to IPAddress:ipAddr on Port:port
         public static async Task Connect(string ipAddr, int port)
         {
             try
@@ -26,8 +27,6 @@ namespace ChatApp
                 Console.WriteLine("Connected to host. Say hi!");
                 connected = true;
                 
-                //Send public key
-
                 _ = Task.Run(() => ListenForMessages(client));
                 await SendMessage(client);
             }
@@ -41,6 +40,7 @@ namespace ChatApp
             }
         }
 
+        //Starts listener, making you the Host 
         public static async Task StartListener(string ipAddr, int port)
         {
             try
@@ -72,6 +72,7 @@ namespace ChatApp
             }
         }
 
+        //Stops the Listener
         public static void StopListener()
         {
             host?.Stop();
@@ -79,6 +80,7 @@ namespace ChatApp
             connected = false;
         }
 
+        //Starts listening for messages sent
         private static async Task ListenForMessages(TcpClient client)
         {
             var stream = client.GetStream();
@@ -107,7 +109,7 @@ namespace ChatApp
             }
         }
 
-
+        //Sends message over the network stream
         private static async Task SendMessage(TcpClient client)
         {
             var stream = client.GetStream();
@@ -121,6 +123,7 @@ namespace ChatApp
             }
         }
 
+        //Checks of the selected port is already in use
         public static bool IsPortInUse(string ipAddr, int port)
         {
             try
@@ -136,6 +139,7 @@ namespace ChatApp
             }
         }
 
+        //Returns your public IP Address
         public static async Task<string> GetIpAddress()
         {
             using var httpClient = new HttpClient();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "P:\\Programming\\ChatApp\\ChatApp\\ChatApp.csproj": {}
+    "P:\\Programming\\ChatApp\\ConsoleChatApp\\ChatApp\\ChatApp.csproj": {}
   },
   "projects": {
-    "P:\\Programming\\ChatApp\\ChatApp\\ChatApp.csproj": {
+    "P:\\Programming\\ChatApp\\ConsoleChatApp\\ChatApp\\ChatApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\Programming\\ChatApp\\ChatApp\\ChatApp.csproj",
+        "projectUniqueName": "P:\\Programming\\ChatApp\\ConsoleChatApp\\ChatApp\\ChatApp.csproj",
         "projectName": "ChatApp",
-        "projectPath": "P:\\Programming\\ChatApp\\ChatApp\\ChatApp.csproj",
+        "projectPath": "P:\\Programming\\ChatApp\\ConsoleChatApp\\ChatApp\\ChatApp.csproj",
         "packagesPath": "C:\\Users\\Giovanni\\.nuget\\packages\\",
-        "outputPath": "P:\\Programming\\ChatApp\\ChatApp\\obj\\",
+        "outputPath": "P:\\Programming\\ChatApp\\ConsoleChatApp\\ChatApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Giovanni\\AppData\\Roaming\\NuGet\\NuGet.Config",

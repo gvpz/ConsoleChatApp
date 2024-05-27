@@ -2,12 +2,6 @@
 using System.Threading.Tasks;
 using ChatApp;
 
-//
-// Implement RSA/Asymmetric Encryption
-// 
-// Add comments to explain everything
-//
-
 
 class Program
 {
@@ -15,12 +9,14 @@ class Program
     private static int port;
     public static Encryption encryption;
 
+    //The main task that starts on Process Start
     private static async Task Main(string[] args)
     {
         AppDomain.CurrentDomain.ProcessExit += (sender, args) => NetworkManager.StopListener();
         await Welcome();
     }
 
+    //Welcomes the user and prompts for port
     private static async Task Welcome()
     {
         ipAddress = await NetworkManager.GetIpAddress();
@@ -37,23 +33,24 @@ class Program
         await MainLoop();
     }
 
+    //The main loop.  Cycles through possible inputs ask of the user
     private static async Task MainLoop()
     {
         await StartEncryption();
         
         while (true)
         {
-            var input = Console.ReadLine();
+            var input = Console.ReadLine()?.ToLower();
 
-            if (input == "Connect")
+            if (input == "connect")
             {
                 await Connect();
             }
-            else if (input == "Listen")
+            else if (input == "listen")
             {
                 await Host();
             }
-            else if (input == "Exit")
+            else if (input == "exit")
             {
                 NetworkManager.StopListener();
                 break;
@@ -61,6 +58,7 @@ class Program
         }
     }
 
+    //Method called when the user wants to connect to a Host.  Prompts for the Host's information
     private static async Task Connect()
     {
         Console.WriteLine("What IP address do you want to connect to?");
@@ -80,12 +78,14 @@ class Program
         await NetworkManager.Connect(hostIPAddr, hostPort);
     }
 
+    //Method called when the user wants to be Host.  Starts a Listener
     private static async Task Host()
     {
         await NetworkManager.StartListener(ipAddress, port);
         Console.WriteLine("Waiting for a connection request...");
     }
 
+    //Creates the encryption object for interaction
     private static async Task StartEncryption()
     {
         encryption = new Encryption();

@@ -23,11 +23,13 @@ public class Encryption
     
     #endregion
     
+    //Constructor creates key 
     public Encryption()
     {
         CreateKey();
     }
     
+    //Create RSA keys
     private void CreateKey()
     {
         rsa = RSA.Create();
@@ -37,6 +39,7 @@ public class Encryption
         privateKey = Convert.ToBase64String(rsa.ExportRSAPrivateKey());
     }
 
+    //Returns the encrypted message
     public byte[] EncryptMessage(string message)
     {
         var messageInBytes = Encoding.UTF8.GetBytes(message);
@@ -45,6 +48,7 @@ public class Encryption
         return encryptedMessage;
     }
 
+    //Returns the decrypted message
     public string DecryptMessage(byte[] message)
     {
         var decryptedData = rsa.Decrypt(message, RSAEncryptionPadding.Pkcs1);
@@ -53,6 +57,7 @@ public class Encryption
         return decryptedMessage;
     }
 
+    //Sends public key to other chatter
     public async Task SendPublicKey(TcpClient client)
     {
         var stream = client.GetStream();
@@ -68,6 +73,7 @@ public class Encryption
         Console.WriteLine();
     }
 
+    //Receives public key from other chatter
     public async Task ReceiveKey(TcpClient client)
     {
         var stream = client.GetStream();
